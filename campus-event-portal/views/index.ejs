@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Campus Events</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<h1>Campus Events</h1>
+
+<% events.forEach(function(event){ %>
+
+    <div class="card">
+        <h2><%= event.title %></h2>
+        <p><%= event.description %></p>
+        <p><strong>Date:</strong> <%= event.date %></p>
+        <p><strong>Venue:</strong> <%= event.venue %></p>
+
+        <a href="/register/<%= event.event_id %>">
+            <button>Register</button>
+        </a>
+    </div>
+
+<% }); %>
+
+<br>
+<a href="/admin">Go to Admin</a>
+
+</body>
+</html>
